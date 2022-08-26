@@ -22,7 +22,7 @@ selected = option_menu(
     default_index= 0,
     orientation="horizontal",
     styles = {
-        "container": {"padding": "0!important", "background-color": "#00FFFF"},
+        "container": {"padding": "0!important", "background-color": "#a4f4f9"},
         "icon": {"color": "White", "font-size": "30px"},
         "nav-link": {"font-size": "30px", "text-align": "center", "margin": "0px", "--hover-color": "#E0FFFF"},
         "nav-link-selected": {"background-color": "#FA8072"}
@@ -176,26 +176,22 @@ if selected == "Dashboard":
 
 if selected == "Prediction":
     # st.title("Graduate Student Admission")
-    # st.write("    ")
-    # st.write("    ")
-    # st.write("    ")
-    # st.write("    ")
-    # st.write(" **Prediction**")
-    # st.write(" **.**")
-    # st.write(" **.**")
+
     st.set_option('deprecation.showfileUploaderEncoding', False)
     model = pickle.load(open('regressor.pkl', 'rb'))
 
 
     def main():
         st.markdown(
-            "<h1 style='text-align: center; color: Black;background-color:#E0FFFF'>Student Admission Prediction</h1>",
+            "<h1 style='text-align: center;  color: Black;background-color:#E0FFFF'>Student Admission Prediction</h1>",
             unsafe_allow_html=True)
+
 #         st.markdown(
 #             "<h3 style='text-align: center; color: salmon ;'>Drop in The required Inputs and we will do  the rest.</h3>",
 #             unsafe_allow_html=True)
 #         st.markdown("<h4 style='text-align: center; color: White;'>This Project is by Jaisingh Chauhan</h4>",
 #                     unsafe_allow_html=True)
+        st.write("-------------------------------------------------------------------------------------------------------  ")
 
         cgpa = st.slider("Input Your CGPA", 0.0, 10.0, 9.0,0.01)
         gre = st.slider("Input your GRE Score", 0, 340, 300,1)
@@ -211,7 +207,7 @@ if selected == "Prediction":
             # # result = model.predict(inputs)
             # result = round(model.predict(inputs[0]*100, 3))
             # # updated_res = result.flatten().astype(float)
-            st.success('My Chances of getting admission in postgraduate degree is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
+            st.success('Your chances of getting admission in postgraduate degree is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
 
     if __name__ == '__main__':
         main()
