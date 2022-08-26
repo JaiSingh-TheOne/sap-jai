@@ -189,10 +189,10 @@ if selected == "Prediction":
 
     def main():
         st.markdown(
-            "<h1 style='text-align: center; color: Black;background-color:#E0FFFF'>Graduate Admission Predictor</h1>",
+            "<h1 style='text-align: center; color: Black;background-color:#E0FFFF'>Student Admission Prediction</h1>",
             unsafe_allow_html=True)
 #         st.markdown(
-#             "<h3 style='text-align: center; color: White;'>Drop in The required Inputs and we will do  the rest.</h3>",
+#             "<h3 style='text-align: center; color: salmon ;'>Drop in The required Inputs and we will do  the rest.</h3>",
 #             unsafe_allow_html=True)
 #         st.markdown("<h4 style='text-align: center; color: White;'>This Project is by Jaisingh Chauhan</h4>",
 #                     unsafe_allow_html=True)
@@ -207,11 +207,11 @@ if selected == "Prediction":
 
         # inputs = [[gre, toefl, uni_rating, SOP, LOR, cgpa, research]]
 
-        if st.button('Predict'):
+        if st.button('Check My Chances of Admission'):
             # # result = model.predict(inputs)
             # result = round(model.predict(inputs[0]*100, 3))
             # # updated_res = result.flatten().astype(float)
-            st.success('The Chances of getting admission is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
+            st.success('My Chances of getting admission in postgraduate degree is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
 
     if __name__ == '__main__':
         main()
