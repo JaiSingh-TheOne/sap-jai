@@ -191,11 +191,11 @@ if selected == "Prediction":
         st.markdown(
             "<h1 style='text-align: center; color: Black;background-color:#E0FFFF'>Graduate Admission Predictor</h1>",
             unsafe_allow_html=True)
-        st.markdown(
-            "<h3 style='text-align: center; color: White;'>Drop in The required Inputs and we will do  the rest.</h3>",
-            unsafe_allow_html=True)
-        st.markdown("<h4 style='text-align: center; color: White;'>This Project is by Jaisingh Chauhan</h4>",
-                    unsafe_allow_html=True)
+#         st.markdown(
+#             "<h3 style='text-align: center; color: White;'>Drop in The required Inputs and we will do  the rest.</h3>",
+#             unsafe_allow_html=True)
+#         st.markdown("<h4 style='text-align: center; color: White;'>This Project is by Jaisingh Chauhan</h4>",
+#                     unsafe_allow_html=True)
 
         cgpa = st.slider("Input Your CGPA", 0.0, 10.0, 9.0,0.01)
         gre = st.slider("Input your GRE Score", 0, 340, 300,1)
