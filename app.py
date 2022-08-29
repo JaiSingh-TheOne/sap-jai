@@ -196,10 +196,11 @@ if selected == "Prediction":
         cgpa = st.slider("CGPA", 0.0, 10.0, 9.0,0.01)
         gre = st.slider("GRE Score", 0, 340, 300,1)
         toefl = st.slider("TOEFL Score", 0, 120, 100,1)
-        research = st.slider("Research Experience (0 = NO, 1 = YES)", 0, 1, 1)
         uni_rating = st.slider("Rating of the University (scale 1-5)", 1, 5, 4,1)
         SOP = st.slider("Rating of the SOP (Statement of Purpose)", 1.0, 5.0, 4.0,0.5)
         LOR = st.slider("Rating of the LOR (Letter of Recommendation)", 1.0, 5.0, 4.0,0.5)
+        cgpa = st.slider("CGPA", 0.0, 10.0, 9.0,0.01)
+        research = st.slider("Research Experience (0 = NO, 1 = YES)", 0, 1, 1)
 
         # inputs = [[gre, toefl, uni_rating, SOP, LOR, cgpa, research]]
 
