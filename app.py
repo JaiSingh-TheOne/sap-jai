@@ -207,8 +207,15 @@ if selected == "Prediction":
             # # result = model.predict(inputs)
             # result = round(model.predict(inputs[0]*100, 3))
             # # updated_res = result.flatten().astype(float)
-            st.success('Your chances of getting admission in postgraduate degree is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
-
+            ## st.success('Your chances of getting admission in postgraduate degree is {}%'.format(round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)))
+            ## Using if-else statement for -ve as 0% and more than 100 as 100%
+            res = round(model.predict([[gre, toefl, uni_rating, SOP, LOR, cgpa, research]])[0]*100, 3)
+            if res < 0:
+                st.success('Your chances of getting admission in postgraduate degree is 00.000%')
+            elif res > 100:
+                st.success('Your chances of getting admission in postgraduate degree is 100.000%')
+            else:
+                return st.success('Your chances of getting admission in postgraduate degree is {}%'.format(res))
     if __name__ == '__main__':
         main()
 
