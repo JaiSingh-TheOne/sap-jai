@@ -193,7 +193,7 @@ if selected == "Prediction":
 #                     unsafe_allow_html=True)
         st.write("-------------------------------------------------------------------------------------------------------  ")
 
-        cgpa = st.slider("CGPA", 0.0, 10.0, 9.0,0.01)
+        
         gre = st.slider("GRE Score", 0, 340, 300,1)
         toefl = st.slider("TOEFL Score", 0, 120, 100,1)
         uni_rating = st.slider("Rating of the University (scale 1-5)", 1, 5, 4,1)
